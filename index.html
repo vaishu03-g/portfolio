@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAISHNAVI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+        body{
+    margin: 0%;
+    background-color: #020202;
+    font-family: "Quicksand", sans-serif;
+            position: relative;
+}
+.avatar{  
+    position: absolute;
+    right: 220px;
+    top: 170px;
+    width: 350px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 45px rgba(0, 255, 255, 0.795);
+
+}
+
+@keyframes avatarani{
+    from{
+        transform: translateX(150px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes glow{
+  
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+header{
+    display: flex;
+    position: fixed;
+    background-color: rgba(25, 25, 25, 0.573);
+    color: rgba(0, 255, 255, 0.795);
+    padding: 20px;
+    box-shadow: 0,0,10,white;
+    width: 100%;
+}
+.name-head{
+    margin-left: 30px;
+    display: inline-block;
+    font-size: larger;
+    font-weight: bold;
+}
+.contact{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    margin-left: 900px;
+    margin-right: 50px;
+}
+.contact a{
+    flex-basis: 20%;
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.795);
+    margin-left: 25px;
+    transition: 0.25s;
+}
+.contact a:hover{
+    font-size: large;
+    
+    color: white;
+ 
+}
+.info{
+    display: inline-block;
+    max-width: 600px;
+    margin-left: 200px;
+    margin-top: 250px;
+}
+.hireme{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent;
+    border: solid;
+    border-color: rgba(0, 255, 255, 0.795);
+    color: rgba(0, 255, 255, 0.795);
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 200px;
+    margin-top: 10px;
+    transition: 0.25s;
+}
+.hireme:hover{
+    color: rgb(38, 28, 101);
+    background-color: rgba(0, 255, 255, 0.795);  
+    
+}
+ .visit{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: transparent;
+    border: solid;
+    border-color: rgba(0, 255, 255, 0.795);
+    color: rgba(0, 255, 255, 0.795);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.25s;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.visit:hover{
+    color: rgb(38, 28, 101);
+    background-color: rgba(0, 255, 255, 0.795);  
+    
+}
+.buttons{
+    display: inline-block;
+    border-radius: 15px;
+}
+.Letstalk{
+    display: inline-block;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 20px;
+    color: rgb(28, 20, 74);
+    font-weight: 600;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.Letstalk:hover{
+    background-color: transparent;
+    border: solid;
+    border-color: white;
+    color: white;
+}
+.card{
+    margin-left: 50px;
+    display: inline-block;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+    width: 300px;
+    border: solid 2px white;
+    border-radius: 5px;
+    color: white;
+    box-shadow: rgba(0, 255, 255, 0.795)(10 20 30);
+    padding-bottom: 20px;
+} 
+.project-grid{
+    display: grid;
+    margin-top:40px;
+    margin-left: 200px;
+    margin-right: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 40px;
+    
+}
+html{
+    scroll-behavior: smooth;
+    
+}  
+.contactinfo{
+    display: inline-block;
+    color: white;
+    margin-left: 200px;
+}
+.contacthub{
+    padding-top: 50px;
+}
+.download{
+    width: 150px;
+    height: 50px;
+    background-color: rgba(0, 255, 255, 0.795);
+    border-radius: 30px;
+    color: rgb(28, 20, 74);
+    font-weight: 700;
+    transition: 0.15s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.download:hover{
+    transform:scale(1.025);
+    background-color: transparent;
+    border-radius: 30px rgba(0, 255, 255, 0.795);
+    border: solid 2px ;
+    color: rgba(0, 255, 255, 0.795);
+    font-weight: 700;
+}
+.name{
+    background-color: rgba(255, 255, 255, 0.722);
+    border-radius: 30px rgba(0, 255, 255, 0.795);
+    padding-left: 20px;
+    outline: none;
+    border: none;
+    padding-left: 50px;
+
+}
+.name::placeholder{
+    padding-left: 0px;
+    color: rgb(28, 20, 74);
+    font-size: 14px;
+    
+}
+.name:focus{
+    color: rgb(28, 20, 74);
+    font-size: 20px;
+  
+}
+
+.contacthub{
+    display: grid;
+    grid-template-columns: 500px 500px 200px;
+    column-gap: 100px;
+}
+form{
+    padding-top: 40px;
+    display: inline-block;
+}
+.contactinfo{
+    display: inline-block;
+}
+.submit{
+    margin-top: 280px;    
+}
+#about{
+    margin-top: 400px;
+    padding-top: 50px;
+    font-size: 6px;
+}
+#projectspace{
+    margin-top: 100px;
+    padding-top: 50px;
+}
+#contactspace{
+    margin-top: 150px;
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+@media (max-width:421px){
+   body{
+    padding-bottom: 150px;
+   }
+  .avatar{
+    display: none;
+  }
+    .contact {
+        position: sticky;
+        display: block;
+        margin-top: 40px;
+        margin-left: 0px;
+        left: 10px;
+        background-color: rgba(38, 28, 101, 1);
+    }
+    .info{
+        display: inline-block;
+        width: 250px;
+        margin-left: 50px;
+        margin-top: 150px;
+    }
+    .Letstalk{
+        margin-left: 196px;
+        margin-top: 20px;
+    }
+    .project-grid{
+        grid-template-columns: 1fr;
+        margin-left: 30px;
+    }
+    hr{
+        display: none;
+    }
+    #about{
+        margin-top: 150px;
+        padding-top: 20px;
+        font-size: 10px;
+    }
+    #about p{
+        font-size: 10px;
+    }
+    #projectspace{
+        padding-top: 50px;
+        margin-top: 100px;
+        padding-top: 30px;
+    }
+    #projectspace #phead{
+        margin-left: 40px;
+        font-size: 20px;
+    }
+    #contactspace .contactinfo{
+        margin-top: 50px;
+        padding-bottom: 400px;
+        margin-left: 60px;
+    }
+    .name-head{
+        margin-left: 30px;
+        display: block;
+        font-size: larger;
+        font-weight: bold;
+        position: static;
+    }
+    header{
+display:block;
+        width:421px;
+        position:static;
+
+}
+    .form{
+display:none;
+}
+    .submit{
+        display:none;
+}
+}
+.logos{
+    animation-name: logoani;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes logoani{
+    0%{
+        transform: translate(0, 0px);
+    }
+    50%{
+        transform: translate(0,15px);
+    }
+    100%{
+        transform: translate(0, 0px);
+    }
+  
+}
+.nameani{
+    animation-name: nameani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes nameani{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.delayani{
+    animation-name: delayani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    
+}
+@keyframes delayani{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.paraani{
+    animation-name: paraani;
+    animation-duration: 3s;
+    animation-iteration-count:1;
+    animation-timing-function: ease-in-out;
+}
+@keyframes paraani{
+    from{
+    
+        width: 50%;
+    }
+    to{
+       
+        width: 100%;
+    }
+}
+.infoani{
+    animation-name: infoani;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+
+}
+@keyframes infoani{
+    0%{
+        transform: translateY(-90px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+   .coursel{
+    position: relative;
+   }
+   .logos3{
+    position: absolute;
+    top: 100px;
+    left: 450px;
+   }
+.card3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+}
+    </style>
+</head>
+<body id="home" >
+    <img class="avatar logos" src="WhatsApp Image 2025.jpg" alt="">
+    <header class="delayani">
+        <div class="name-head">
+            VAISHNAVI
+        </div>
+        <br><div class="contact">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projectspace">PROJECTS</a>
+            <a href="#contactspace">CONTACT</a>
+        </div>
+    </header>
+    <div class="info infoani">
+        <p  style="font-size:xx-large; color: white; margin: 15px; margin-left: 0px;">Hi , Im VAISHNAVI</p>
+        <P class="nameani delayani" style="color: aqua; display: inline-block; margin: 5px;"><span style="color: white;">Im a </span>FRONTEND DEVELOPER</P>
+        <p class="paraani " style="color: rgba(255, 255, 255, 0.688);">Recent programming program graduate planning to use my internship experience and desire to learn in a front-end developer role where I can create influential coding solutions.</p>
+    </div><br>
+    <div class="buttons infoani">
+        <a href="mailto:suryagovind89@gmail.com"><button class="hireme delayani">Hire Me</button></a>
+        <a href="#contactspace"><button class="Letstalk delayani">Let's Talk</button></a>
+    </div>
+   
+    <div id="about">
+    
+    <p class="aboutp" style="color: rgba(0, 255, 255, 0.795); margin-left: 70px; font-size:55px ;font-weight: 500;">ABOUT</p>
+    <p class="aboutp" style="color: white; margin-left: 80px; font-size: 25px;"> Expertise in </p>
+    <div class="coursel" > <img class="logos" src="./html.png" style="margin-top: 40px; display: flex; margin-left: 200px; -webkit-filter:drop-shadow(0.5px 0.5px 5px #fff); filter: drop-shadow(0.5px 0.5px 5px #fff);" width="150px"><img class="logos" src="./css.png" width="150px"style=" margin-top: 40px; display: flex; margin-left: 200px;-webkit-filter:drop-shadow(0.5px 0.5px 5px #fff); filter: drop-shadow(0.5px 0.5px 5px #fff);  "><img class="logos3 logos" src="./js.png" style=" display: flex;  -webkit-filter:drop-shadow(0.5px 0.5px 5px #fff); filter: drop-shadow(0.5px 0.5px 5px #fff);" width="150px"><img class="logos" src="" style="margin-top: 40px; display: flex; margin-left: 200px; -webkit-filter:drop-shadow(0.5px 0.5px 5px #fff); filter: drop-shadow(0.5px 0.5px 5px #fff);" width="150px"></div>
+    </div>
+   
+    <div id="projectspace">
+    <hr width="300px">
+    <project>
+        <CENTER><p id="phead" style="color: white; margin-top: 30px;"> PROJECTS</p></CENTER>
+        <div class="project-grid">
+         <div class="card">
+            <div class="top">
+                <img src="./calculator.png" width="100%">
+            </div>
+            <p style="font-size: 20px; font-weight: 400; margin: 0%; margin-left: 10px; margin-top: 10px; font-weight: 600;">Calculator</p>
+            <p style="margin-left: 20px;">A responsive calculator web app built using HTML, CSS, and JavaScript to perform basic arithmetic operations with a clean and user-friendly interface.</p>
+            <a href="https://github.com/vaishu03-g/Calculator.git" target="_blank" rel="noopener noreferrer"> <button class="visit">Visit</button></a>
+        </div>
+         <div class="card">
+            <div class="top">
+                <img src="./todo.png" width="100%">
+            </div>
+            <p style="font-size: 20px; font-weight: 400; margin: 0%; margin-left: 10px; margin-top: 10px;">Todo ist</p>
+            <p style="margin-left: 20px;">A Todo List web app developed using HTML, CSS, and JavaScript that helps users add and manage daily tasks with a simple interface.</p>
+            <a href="https://github.com/vaishu03-g/Todo.git" target="_blank" rel="noopener noreferrer"> <button class="visit">Visit</button></a>
+        </div>
+         <div class="card card3">
+             <p>....</p>
+        </div>
+    </project>
+    </div>
+  
+  <div id="contactspace">
+
+  <contact>
+    <div class="contacthub">
+        <div class="contactinfo">
+            <h1>Contact Me</h1><br><br>
+            <a style="text-decoration: none; cursor: pointer; color: rgba(0, 255, 255, 0.795);" href="mailto:vaishnavigovind89@gmail.com"><i class="fa-regular fa-envelope" style="font-size: 24px; position: relative; top: 2px;"></i> vaishnavigovind89@gmail.com</a><br><br>
+            <a style="text-decoration: none; cursor: pointer; color: rgba(0, 255, 255, 0.795);" href="#"><i class="fa-solid fa-phone-volume" style="font-size: 24px; position: relative; top: 2px;"></i> 9025840199</a>
+          <br><br><br><br>  <a href="./BALASURYA G RESUME.pdf" download="Balasurya's Resume"><button class="download" value="Download CV"><i class="fa-solid fa-download" style="font-size: 14px;"></i>  Download CV</button></a>
+        </div>
+        <div class="form" action="#">
+         <input class="name" type="text" placeholder="Your Name" style="width: 100%; height: 50px; border-radius: 10px;" ><br><br><br>
+         <input class="name" type="email" placeholder="Your Email" style="width: 100%; height: 50px; border-radius: 10px;" ><br><br><br>
+         <input class="name" type="text-area" placeholder="Your message" style="width: 100%; height: 150px; border-radius: 10px;" >
+        </div>
+        <div class="submit">
+            <button class="download" value="submit"><i class="fa-solid fa-paper-plane" style="font-size: 14px;"></i>  Submit</button>
+
+        </div>
+</div>
+
+  </contact>
+  <br><br><br><br><br>
+</div>
+  
+</body>
+</html>
